@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <!-- <link rel="stylesheet" href="C:\Miniproject\static\w5.css"> -->
+        <h1 style="text-align: center;color: rgb(17, 15, 15);">PREDICTION </h1>
+        <style>
+          html {
+    background: linear-gradient( 90DEG ,BLACK,white,black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 115%;
+}
+.column {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}
+.box{
+    width:1300px;
+    height: 650px;
+    position: center fixed;
+    margin:auto;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px 6px black;
+    }
+
+.box .box1 .right{
+  align-content: center;
+}    
+    .box2{
+        width: 1000px;
+        height: 650px;
+        left: 50px;
+        margin:0;
+        background: black;
+        border-radius: 0 10px 10px 0;
+        position: static;
+        }
+
+        .inputbox {
+            position: relative;
+            width: 196px;
+          }
+          
+          .inputbox input {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            color: #23242a;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            z-index: 10;
+          }
+          
+          .inputbox span {
+            position: absolute;
+            left: 0;
+            padding: 20px 10px 10px;
+            font-size: 1em;
+            color: #8f8f8f;
+            letter-spacing: 00.05em;
+            transition: 0.5s;
+            pointer-events: none;
+          }
+          
+          .inputbox input:valid ~span,
+          .inputbox input:focus ~span {
+            color: red;
+            transform: translateX(-10px) translateY(-34px);
+            font-size: 0,75em;
+          }
+          
+          .inputbox i {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: WHITE;
+            border-radius: 4px;
+            transition: 0.5s;
+            pointer-events: none;
+            z-index: 9;
+          }
+          
+          .inputbox input:valid ~i,
+          .inputbox input:focus ~i {
+            height: 44px;
+          }
+
+        .box2 .overlay {
+            padding: 100px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding-top: 0%;
+            padding-left: 30%;
+        }
+
+            .parent {
+              margin: 1rem;
+              padding: 2rem 2rem;
+              text-align: center;
+            }
+            .child1 {
+              display: inline-block;
+              border: 1px solid black;
+              width: 480px;
+              height: 650px;
+              padding: 1rem 1rem;
+              vertical-align: middle;
+              background: rgb(74, 129, 129);;
+              border-radius: 10px 10px 10px 10px;
+            }
+            .child2 {
+              overflow-y:auto;
+              display: inline-block;
+              border: 1px solid white;
+              background: white;
+              width:730px;
+              height:650px;
+              padding: 1rem 1rem;
+              vertical-align: middle;
+              border-radius: 10px 10px 10px 10px;
+            }
+            
+            .inputGroup {
+              font-family: 'Segoe UI', sans-serif;
+              margin: 1em 0 1em 0;
+              max-width: 190px;
+              position: relative;
+              padding-top: 5%;
+            }
+            
+            .inputGroup input {
+              font-size: 100%;
+              padding: 0.8em;
+              outline: none;
+              border: 2px solid rgb(200, 200, 200);
+              background-color: transparent;
+              border-radius: 20px;
+              width: 100%;
+            }
+            .inputGroup :is(input:focus, input:valid)~label {
+              transform: translateY(-50%) scale(.9);
+              margin: 0em;
+              margin-left: 1.3em;
+              padding: 0.4em;
+              background-color: #e8e8e8;
+            }
+            
+            .inputGroup :is(input:focus, input:valid) {
+              border-color: rgb(150, 150, 200);
+            }
+            .parent .child1 .overlay {
+              padding: 100px;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              box-sizing: border-box;
+              padding-top: 0%;
+              padding-left: 30%;
+            }
+
+            button {
+              padding: 17px 40px;
+              border-radius: 50px;
+              border: 0;
+              background-color: white;
+              box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-size: 10px;
+              transition: all .5s ease;
+              height:40px;width:140px;
+             }
+             
+
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+             
+             button:hover {
+              letter-spacing: 3px;
+              background-color: hsl(178, 60%, 51%);
+              color: hsl(0, 0%, 100%);
+              box-shadow: rgb(8, 116, 146) 0px 7px 29px 0px;
+             }
+             
+             button:active {
+              letter-spacing: 3px;
+              background-color: hsl(178, 60%, 51%);
+              color: hsl(0, 0%, 100%);
+              /* box-shadow: rgb(93 24 220) 0px 0px 0px 0px; */
+              transform: translateY(10px);
+              transition: 100ms;
+             }
+.dept{
+  width: 2rem;
+  
+}
+
+.square {
+  color:white;
+  width: 190px;
+  height: 254px;
+  margin: 0 auto;
+  background-color: #011522;
+  border-radius: 8px;
+  z-index: 1;
+  margin-bottom: 2px;
+ }
+ 
+ .tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+ }
+ 
+ .circle {
+  padding: 0 4px;
+ }
+ 
+ .box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+ }
+ 
+ .red {
+  background-color: #ff605c;
+ }
+ 
+ .yellow {
+  background-color: #ffbd44;
+ }
+ 
+ .green {
+  background-color: #00ca4e;
+ }
+ 
+  .child3{
+    display: flex;
+    overflow-y:auto;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 190px;
+    height: 254px;
+    margin: 0 auto;
+    background-color: #011522;
+    border-radius: 8px;
+    z-index: 1;
+   }
+   
+   .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+.card__content{
+  color: #e8e8e8;
+}   
+
+        </style>
+    </head>
+    <body>
+      <div class='parent'>
+        <div class='child1'>
+            <H1 style="text-align: center; color: rgb(6, 6, 6);">ENTER YOUR DETAILS</H1>
+          <div class="ip">
+            <form action="#" method="post">
+              <label for="fname" style="font-weight:bold;font-size: 15px;font-family:'verdana';">Diabeties:</label>
+              <select name="diabeties" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">Hypertension:</label>
+              
+              <select name="hypertension" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+              
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">Glaucoma:</label>
+              
+              <select name="glaucoma" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">Diabetic rectinopathy:</label>
+              
+              <select name="diabeticrectinopathy" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">High myopia:</label>
+              
+              <select name="highmyopia" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">Sickle cell anemia:</label>
+            
+              <select name="sicklecellanemia" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <label for="fname"style="font-weight:bold;font-size: 15px;font-family:'verdana';">AIDS:</label>
+              
+              <select name="aids" id="dept" style="height:30px;width:200px;font-size: 15px;font-family:'verdana';background-color:BLACK;color:white">
+                <option value="1">yes</option>
+                <option value="0">no</option>
+              </select>
+              <br><br>
+              <button class="button-27">Predict</button>
+        </form>
+          </div>
+        </div>
+        <div class='child2'>
+          <h1 style="text-align: center; color: BLACK; ">Prediction </h1>
+          <div class="card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+              {{results}}
+              
+            </div>
+          </div>
+      </div>
+    </body>
+</html>
